@@ -3,35 +3,30 @@ pipeline {
 
     tools {
         nodejs "Node25"
-        dockerTool "Dockertool" 
+        dockerTool "Dockertool"
     }
 
     stages {
+
         stage('Instalar dependencias') {
             steps {
-                sh 'npm install'
+                sh 'docker run --rm -v "$PWD":/app -w /app node:18 npm install'
             }
         }
 
         stage('Ejecutar tests') {
             steps {
-                sh 'npm test'
+                sh 'docker run --rm -v "$PWD":/app -w /app node:18 npm test'
             }
         }
 
         stage('Construir Imagen Docker') {
-            when {
-                expression { currentBuild.result == null || currentBuild.result == 'SUCCESS' }
-            }
             steps {
                 sh 'docker build -t hola-mundo-node:latest .'
             }
         }
 
         stage('Ejecutar Contenedor Node.js') {
-            when {
-                expression { currentBuild.result == null || currentBuild.result == 'SUCCESS' }
-            }
             steps {
                 sh '''
                     docker stop hola-mundo-node || true
@@ -42,4 +37,3 @@ pipeline {
         }
     }
 }
- 
