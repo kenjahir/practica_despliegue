@@ -1,33 +1,33 @@
 {
-    "name": "hola-mundo-node",
-    "version": "1.0.0",
-    "description": "Mi aplicación Node.js",
-    "main": "index.js",
-    "scripts": {
-        "test": "jest"
-    },
-    "jest": {
-        "testEnvironment":"node"
-    },
-    "dependencies": {
-        "express": "^4.22.1",
-        "jest": "^30.2.0",
-        "supertest": "^7.2.2"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/kenjahir/practica_despliegue.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "directories": {
-        "test": "tests"
-    },
-    "devDependencies": {},
-    "type": "commonjs",
-    "bugs": {
-        "url": "https://github.com/kenjahir/practica_despliegue/issues"
-    },
-    "homepage": "https://github.com/kenjahir/practica_despliegue#readme"
+  "name": "hola-mundo-node",
+  "version": "1.0.0",
+  "description": "Mi aplicación Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx jest"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "dependencies": {
+    "express": "^4.22.1",
+    "jest": "^30.2.0",
+    "supertest": "^7.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kenjahir/practica_despliegue.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {},
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/kenjahir/practica_despliegue/issues"
+  },
+  "homepage": "https://github.com/kenjahir/practica_despliegue#readme"
 }
